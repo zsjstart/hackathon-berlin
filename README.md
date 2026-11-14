@@ -3,8 +3,7 @@
 Red-team notes and tooling for the **Break the Model** challenge, where the goal is to make
 *Riley* (the AI assistant of a fictional hospital) hand out private (fake) patient or staff data.
 
-All data in this challenge is fake. These files are for security research and were produced
-during the hackathon.
+
 
 ## What's here
 
@@ -32,11 +31,8 @@ data at all.
 
 ```bash
 # re-run all Level-2 encoding payloads, 5 tries each, to measure how often they work
-python3 run_payloads.py --model medium --level 3 --only base64,rot13,revers,dot --trials 5
+python3 run_payloads.py --model small --level 2 --only base64,rot13,revers,dot --trials 5
 
-# run everything tagged for Level 2
-python3 run_payloads.py --model small --target-level 2 --level 3
 ```
 
-The runner uses the same `btm` client as the starter kit, so set up `.env` first (see the starter
-kit's `setup.py`). It appends every call to `logs/my_attempts.jsonl`.
+
