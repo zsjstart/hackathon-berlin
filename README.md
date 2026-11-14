@@ -21,6 +21,7 @@ The challenge offers four models, easiest to hardest. Use the short name with `r
 | File | What it is |
 |---|---|
 | [`FINDINGS.md`](FINDINGS.md) | The write-up: three Level-2 findings (F-01, F-02, F-03), each with a description, the exact prompt, the security impact, and how to fix it. |
+| [`BEHAVIOR.md`](BEHAVIOR.md) | A model of how Riley decides what to do at Level 3: a request classifier that runs before any tool, built from a systematic recon of every tool vs public/private data. |
 | [`payloads.jsonl`](payloads.jsonl) | Every attack prompt we tried, one per line, tagged with technique, target level, result, and an example `turn_id`. |
 | [`run_payloads.py`](run_payloads.py) | Re-runs the prompts against Riley, auto-decodes the reply, and flags real leaks. |
 
