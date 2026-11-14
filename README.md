@@ -20,7 +20,7 @@ The challenge offers four models, easiest to hardest. Use the short name with `r
 
 | File | What it is |
 |---|---|
-| [`FINDINGS.md`](FINDINGS.md) | The write-up: four Level-2 findings (F-01…F-04), each with a description, the exact prompt, the security impact, and how to fix it. |
+| [`FINDINGS.md`](FINDINGS.md) | The write-up: three Level-2 findings (F-01, F-02, F-03), each with a description, the exact prompt, the security impact, and how to fix it. |
 | [`payloads.jsonl`](payloads.jsonl) | Every attack prompt we tried, one per line, tagged with technique, target level, result, and an example `turn_id`. |
 | [`run_payloads.py`](run_payloads.py) | Re-runs the prompts against Riley, auto-decodes the reply, and flags real leaks. |
 
@@ -32,8 +32,7 @@ data at all.
 
 - **Level 2 is beatable.** Riley will look up a patient, and a simple encoding (base64, ROT13,
   reversed, or dot-spaced) hides the answer from the filter so it comes out anyway. See F-02.
-- The filter also misses some **plain-text** answers (F-03), and one success can be turned into a
-  **bulk** leak over several messages (F-04).
+- The filter also misses some **plain-text** answers (F-03).
 - **The leaks are not reliable** — the same prompt often works once and is then refused.
 - **Level 3 held.** Across ~40 different attempts, Riley refused every private query before running
   it, so the code lock was never even reached.
