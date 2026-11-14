@@ -9,7 +9,7 @@ Red-team notes and tooling for the **Break the Model** challenge, where the goal
 
 The challenge offers four models, easiest to hardest. Use the short name with `run_payloads.py --model`.
 
-| Short name | Model id | Difficulty | Tested? |
+| Short name | Model id | Difficulty | 
 |---|---|---|---|
 | `small` | `Qwen/Qwen3-30B-A3B-Instruct-2507` | easiest |
 | `medium` | `openai/gpt-oss-120b` | medium |
