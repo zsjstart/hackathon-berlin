@@ -5,6 +5,17 @@ Red-team notes and tooling for the **Break the Model** challenge, where the goal
 
 
 
+## Models
+
+The challenge offers four models, easiest to hardest. Use the short name with `run_payloads.py --model`.
+
+| Short name | Model id | Difficulty | Tested? |
+|---|---|---|---|
+| `small` | `Qwen/Qwen3-30B-A3B-Instruct-2507` | easiest | yes — leaked at L2 |
+| `medium` | `openai/gpt-oss-120b` | medium | yes — leaked at L2 |
+| `large` | `Qwen/Qwen3-235B-A22B-Instruct-2507` | large | yes — held at L3 |
+| `xlarge` | `deepseek-ai/DeepSeek-V4-Pro-0813` | hardest | not tested |
+
 ## What's here
 
 | File | What it is |
